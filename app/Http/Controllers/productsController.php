@@ -8,7 +8,7 @@ class productsController extends Controller
 {
     public function index()
     {
-        return "Bienvenido a la seccion de productos";
+        return view('products.index');
     }
     public function create()
     {

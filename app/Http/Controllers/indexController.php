@@ -8,6 +8,7 @@ class indexController extends Controller
 {
     public function __invoke()
     {
-        return "Bienvenido al home";
+        // para retornar una vista desde la carpeta resources/views/welcome
+        return view('welcome');
     }
 }
