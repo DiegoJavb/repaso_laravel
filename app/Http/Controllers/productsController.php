@@ -16,6 +16,7 @@ class productsController extends Controller
     }
     public function show($product)
     {
-        return "este es el producto: " . $product;
+        //pasar un parametro a una view con compact
+        return view('products.show', compact('product'));
     }
 }
