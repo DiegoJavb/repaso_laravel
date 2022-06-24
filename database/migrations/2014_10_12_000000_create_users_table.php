@@ -13,6 +13,9 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        /*
+        creado con php artisan make:migration create_users_table
+        */ 
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
