@@ -15,9 +15,10 @@ class CreateAuthorsTable extends Migration
     {
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->string('nombre', 20);
+            $table->string('email', 20)->unique();
+            $table->string('password', 20);
+            $table->string('comentario', 20);
             $table->timestamps();
         });
     }

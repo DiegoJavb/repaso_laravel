@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Author;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $dato = new Author();
+        $dato->nombre = 'Juan';
+        $dato->email = 'juan@gmail.com';
+        $dato->password = '123456';
+        $dato->comentario = 'Hola';
+        $dato->save();
     }
 }
