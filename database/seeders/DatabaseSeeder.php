@@ -14,11 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $dato = new Author();
-        $dato->nombre = 'Juan';
-        $dato->email = 'juan@gmail.com';
-        $dato->password = '123456';
-        $dato->comentario = 'Hola';
-        $dato->save();
+        // $this->call(UsersTableSeeder::class);
+        //factory(Author::class, 10)->create();
+        author::factory(20)->create();
     }
 }
