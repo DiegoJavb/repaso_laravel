@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\aboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\productsController;
@@ -26,3 +27,6 @@ Route::controller(productsController::class)->group(
 Route::get('users/{id}', function ($id) {
     return "este es el usuario: " . $id;
 });
+
+Route::get('about/contacto', [aboutController::class, 'index']);
+Route::get('nosotros/autores', [aboutController::class, 'create']);
