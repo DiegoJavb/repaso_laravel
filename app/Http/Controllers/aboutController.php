@@ -14,7 +14,7 @@ class aboutController extends Controller
     }
     public function create()
     {
-        $authors = author::all();
+        $authors = author::paginate(5);
         // $authors = array('Juan', 'Pedro', 'Maria');
         // return $authors;
         // return view('about/autores');
