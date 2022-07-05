@@ -29,4 +29,4 @@ Route::get('users/{id}', function ($id) {
 });
 
 Route::get('about/contacto', [aboutController::class, 'index']);
-Route::get('nosotros/autores', [aboutController::class, 'create']);
+Route::get('about/autores', [aboutController::class, 'create']);

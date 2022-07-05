@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+@extends('vistas.plantilla')
+@section('title','Autores')
+@section('contenido')
+<h1>Bienvenido a la pagina de Autores</h1>
+<ul>
+    @foreach($authors as $autor)
+    <li>{{$autor->nombre}}</li>
+    @endforeach
+
+</ul>
+
+@endsection
