@@ -12,6 +12,7 @@ class aboutController extends Controller
     {
         return view('about/index');
     }
+
     public function create()
     {
         $authors = author::paginate(5);
@@ -19,5 +20,11 @@ class aboutController extends Controller
         // return $authors;
         // return view('about/autores');
         return view('about/autores', compact('authors'));
+    }
+
+    public function show()
+    {
+        $authors = author::all();
+        return view('about/informacion', compact('authors'));
     }
 }

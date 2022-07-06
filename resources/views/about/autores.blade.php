@@ -10,6 +10,6 @@
     @endforeach
 
 </ul>
+<a href="{{route('about.informacion')}}">Mas autores</a>
 {{$authors->links()}}
-
 @endsection
