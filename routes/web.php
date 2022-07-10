@@ -3,6 +3,7 @@
 use App\Http\Controllers\aboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\productsController;
 
 /*
@@ -17,6 +18,7 @@ use App\Http\Controllers\productsController;
 */
 
 Route::get('/', indexController::class);
+//Route::get('nosotros',nosotros::class);
 Route::controller(productsController::class)->group(
     function () {
         Route::get('Productos', 'index');
@@ -38,3 +40,4 @@ Route::controller(aboutController::class)->group(
         Route::get('about/informacion', 'show')->name('about.informacion');
     }
 );
+Route::get('login', [loginController::class, 'index'])->name('login');

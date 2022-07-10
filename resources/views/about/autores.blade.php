@@ -1,3 +1,5 @@
+
+
 @extends('vistas.plantilla')
 @section('title','Autores')
 @section('encabezado')
