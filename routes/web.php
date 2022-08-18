@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\productsController;
+use App\Http\Controllers\validacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,12 @@ Route::controller(aboutController::class)->group(
         Route::get('about/informacion', 'show')->name('about.informacion');
     }
 );
+
 Route::get('login', [loginController::class, 'index'])->name('login');
+Route::post('login', [validacionController::class, 'store'])->name('login.store');
+// Route::controller(loginController::class)->group(
+//     function () {
+//         Route::get('login', 'index')->name('login');
+//         Route::post('login', 'store')->name('login.store');
+//     }
+// );

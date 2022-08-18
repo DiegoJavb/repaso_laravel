@@ -1,5 +1,3 @@
-
-
 @extends('vistas.plantilla')
 @section('title','Autores')
 @section('encabezado')
@@ -8,7 +6,9 @@
 @section('contenido')
 <ul>
     @foreach($authors as $autor)
-    <li>{{$autor->nombre}}</li>
+    <li><strong>Nombre: </strong>{{$autor->nombre}}</li>
+    <li><strong>Email: </strong>{{$autor->email}}</li>
+    <br>
     @endforeach
 
 </ul>
